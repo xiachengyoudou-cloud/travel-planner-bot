@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Travel Planner Bot</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>Travel Planner Bot</h1>
+      <p>行き先・目的・日数から、ざっくり旅行プランを提案します。</p>
+    </header>
+
+    <section class="chat" id="chat" aria-label="チャット">
+      <!-- messages inserted by JS -->
+    </section>
+
+    <section class="panel">
+      <div class="row">
+        <label>
+          行き先
+          <input id="destination" type="text" placeholder="例：Zagreb / 福岡 / Seoul" />
+        </label>
+
+        <label>
+          目的
+          <select id="purpose">
+            <option value="sightseeing">観光</option>
+            <option value="food">グルメ</option>
+            <option value="nature">自然</option>
+            <option value="budget">節約</option>
+          </select>
+        </label>
+
+        <label>
+          日数
+          <select id="days">
+            <option value="1">1日</option>
+            <option value="2">2日</option>
+            <option value="3" selected>3日</option>
+            <option value="4">4日</option>
+            <option value="5">5日</option>
+            <option value="6">6日</option>
+            <option value="7">7日</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="row actions">
+        <button id="send">プランを提案</button>
+        <button id="reset" class="ghost">リセット</button>
+      </div>
+
+      <p class="hint">
+        ※ボット連携の練習として「チャットUI + ルールベース応答」で作っています（必要ならAPI版にも拡張できます）。
+      </p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
